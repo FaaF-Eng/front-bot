@@ -1,0 +1,153 @@
+html,body{
+    background-color: rgb(248, 109, 167); /*Muda a cor do fundo do site*/
+}
+
+.lucyProfile{  /*Muda a foto de perfil + nome do Chat*/
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    align-items: center;
+    color:#FFFCE6;
+    font: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{ /*Muda o quadrado todo principal do chat*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin: 0;
+    
+}
+
+.blocktittle{ /*A parte de cima do bloco do chat*/
+    background-color: rgb(155, 14, 131);
+    width: 500px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.lucyContainer{/*Edita o conjunto da imagem da Lucy + Balão de coração*/
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    bottom: 0; /* Cola na borda inferior */
+    right: 0; /* Cola na borda direita */
+    margin: 0;/* Remove qualquer margem extra */
+    padding: 0; /* Garante que não há espaçamento interno indesejado */
+    z-index: 10;/* Garante que fique acima de outros elementos*/
+
+}
+.elemento{
+    position: relative;
+}
+#heart{ /*Balão de Coração*/
+    animation: subirDescer 2s infinite; 
+    position: absolute;
+    top:-20px;
+    left:-45px;
+}
+#lucyClose{ /*A figura grande da Lucy no site com boca fechada*/
+    position: relative;
+    width: 350px;
+    height: auto;   
+
+}
+
+#block { /*A parte branca do Chat*/
+    background-color: #FFFCE6;
+    width: 500px;
+    height: 600px;
+}
+#blockchat{ /*A parte de baixo do bloco do chat*/
+    background-color: rgb(155, 14, 131);
+    width: 500px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+#lucyProfilePicture{ /*A imagem de perfil da Lucy*/ 
+    height: 73px;
+    width: auto;
+    margin-top: 4%;
+}
+#mensager{ /*Chat*/
+    background-color: #FFFCE6;
+    width: 360px;
+    height: 30px;
+    border:2px solid black ;
+    border-radius:20px 20px 20px 20px ;
+}
+
+/*SESSÃO DO BOTÃO*/
+.btn-animado {
+    border: 2px solid;
+    border-radius: 10px;
+    height: 25px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px; /*Reduz o tamanho da fonte*/
+    box-shadow: 4px 4px 0 00px black; 
+
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #eb27b0;
+    border: none;
+    cursor: pointer;
+    overflow: hidden; /* Importante para conter a animação dentro do botão */
+    transition: background-color 0.3s ease;
+}
+
+.btn-animado:hover {
+    background-color: #ff0095; /* Muda a cor ao passar o mouse */
+}
+
+.btn-animado:active {
+    background-color: #ff8ddd; /* Cor ao clicar */
+}
+
+.btn-animado::after {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 0, 140, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.btn-animado:active::after {
+    transform: translate(-50%, -50%) scale(1); /* Expande o círculo */
+    opacity: 0; /* Faz o efeito desaparecer ao final */
+}
+
+@keyframes subirDescer { /*Animação do coração*/
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
