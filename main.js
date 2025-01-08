@@ -39,7 +39,7 @@ function apagaPost(id){
     const listaDePostAtualizada = pegaPosts().filter((postAtual) =>{
         return postAtual.id !== id;
     })
-    miniRede.post = listaDePostAtualizada;
+    miniRede.posts = listaDePostAtualizada;
 }
 apagaPost(2);
 console.log(pegaPosts());
