@@ -3,7 +3,38 @@ function enviarMensagem(){ //Função para enviar a mensagem, por enquanto vai a
     console.log(mensagem);
 }
 
-// [CRUD]
+// [ARMAZENAR VIRIÁVEL NO HTML ]
+
+document.addEventListener('DOMContentLoaded', () => {
+    let contador = 0; // Inicializa um contador para gerar IDs únicos para as tarefas
+
+    // Define uma ação ao clicar no botão "Adicionar Tarefa"
+    document.getElementById('button').onclick = function() {
+
+        // Captura o valor inserido no campo de texto
+        let mensagem = document.getElementById('mensager').value;
+
+        // Verifica se a tarefa não está vazia
+        if (mensagem !== "") {
+            contador++; // Incrementa o contador para o próximo ID único
+            let divMensagens = document.getElementById('messages'); // Seleciona a DIV onde as tarefas serão exibidas
+
+            // Cria um novo elemento <div> para a nova tarefa
+            let novaMensagem = document.createElement('div');
+            novaMensagem.innerText = mensagem; // Define o texto da nova tarefa como o valor inserido
+            novaMensagem.id = 'mensagem-' + contador; // Atribui um ID exclusivo à nova tarefa
+ 
+            // Adiciona a nova tarefa à DIV de tarefas
+            divMensagens.appendChild(novaMensagem);
+            // Limpa o campo de entrada após adicionar a tarefa
+            document.getElementById('mensager').value = '';
+        }
+    };
+});
+
+
+
+// [CRUD BÁSICO]
 const miniRede = {
     usuarios:[{username: 'fabio'}] ,
     posts: [{id: 1 , owner: 'fabio', content: 'Meu primeiro post'}]
