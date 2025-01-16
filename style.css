@@ -1,6 +1,65 @@
 html,body{
-    background-color: rgb(248, 109, 167); /*Muda a cor do fundo do site*/
+    background-color: rgb(179, 179, 179); /*Muda a cor do fundo do site*/
+    margin: 0; /*Se der erro, a culpa é dessa linha */
 }
+
+/* [ALTERAÇAO DE CORES DO SITE] */
+
+
+/*Conjunto de Aplicações para o código todo*/
+:root{
+    --yellow: #ffd523;
+    --white: #fff;
+    --black: #000;
+    --grey:  rgb(92, 92, 86);
+    --lightgrey:  rgb(179, 179, 179);
+
+    /*Código para mudar o seletor de BODY atual*/
+*{
+    color: var(--fontColor);
+}
+    body{
+    background-color: var(--background);
+    }
+}
+
+.light-theme{
+--background: var(--lightgrey);
+--fontColor: var(--white);
+/*Adicionando o Botão*/
+--background: var(--lightgrey);
+--botaoBg:  var(--black);
+--botaoFontColor:var(--yellow);
+}
+
+.dark-theme{
+--background: var(--black);
+--fontColor: var(--yellow);
+/*Adicionando o Botão*/
+--background: var(--black);
+--botaoBg:  var(--yellow);
+--botaoFontColor:var(--black);
+
+}
+.botão :focus {outline-style: none;}
+
+/*Criando o Botão Arredondado*/
+.botão{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex; /* Adicina Flexbox */
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    color: var(--botaoFontColor);
+    background-color: var(--botaoBg);
+    text-align: center;
+}
+
+/* [OUTRAS CONFIGURAÇÕES] */
 
 .lucyProfile{  /*Muda a foto de perfil + nome do Chat*/
     display: flex;
@@ -40,7 +99,6 @@ html,body{
     margin: 0;/* Remove qualquer margem extra */
     padding: 0; /* Garante que não há espaçamento interno indesejado */
     z-index: 10;/* Garante que fique acima de outros elementos*/
-
 }
 .elemento{
     position: relative;
