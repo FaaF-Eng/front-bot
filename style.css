@@ -1,18 +1,29 @@
+
 html,body{
-    background-color: rgb(179, 179, 179); /*Muda a cor do fundo do site*/
     margin: 0; /*Se der erro, a culpa é dessa linha */
+    background-color: rgb(172, 56, 162); /*Muda a cor do fundo do site*/
 }
 
 /* [ALTERAÇAO DE CORES DO SITE] */
 
+.site{
+    border: 2px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
 
 /*Conjunto de Aplicações para o código todo*/
 :root{
     --yellow: #ffd523;
     --white: #fff;
-    --black: #000;
+    --black: #680F65;
     --grey:  rgb(92, 92, 86);
-    --lightgrey:  rgb(179, 179, 179);
+    --lightgrey:  #4E1282;
+    --pink: #821246;
+    --corClara: #D052A9;
 
     /*Código para mudar o seletor de BODY atual*/
 *{
@@ -24,21 +35,23 @@ html,body{
 }
 
 .light-theme{
---background: var(--lightgrey);
+
 --fontColor: var(--white);
 /*Adicionando o Botão*/
---background: var(--lightgrey);
+--background: var(--corClara);
 --botaoBg:  var(--black);
 --botaoFontColor:var(--yellow);
+--blockColor: white;
 }
 
 .dark-theme{
 --background: var(--black);
---fontColor: var(--yellow);
+--fontColor: var(--white);
 /*Adicionando o Botão*/
 --background: var(--black);
 --botaoBg:  var(--yellow);
 --botaoFontColor:var(--black);
+--blockColor: var(--pink);
 
 }
 .botão :focus {outline-style: none;}
@@ -117,7 +130,7 @@ html,body{
 }
 
 #block { /*A parte branca do Chat*/
-    background-color: #FFFCE6;
+    background-color: var(--blockColor);
     width: 600px;
     height: 600px;
 }
@@ -193,7 +206,7 @@ html,body{
 }
 
 .btn-animado:active::after {
-    transform: translate(-50%, -50%) scale(1); /* Expande o círculo */
+    transform: translate(-50%, -50%) scale(1); /* Expande o círculo  */
     opacity: 0; /* Faz o efeito desaparecer ao final */
 }
 
