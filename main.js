@@ -1,12 +1,13 @@
+
 function enviarMensagem(){ //Função para enviar a mensagem, por enquanto vai apenas jogar pra dentro de uma variável
     let mensagem = document.getElementById("mensager").value;
     console.log(mensagem);
 }
 
-// [ARMAZENAR VIRIÁVEL NO HTML  ]
+// [ARMAZENAR VIRIÁVEL NO HTML ]
 
 document.addEventListener('DOMContentLoaded', () => {
-    let contador = 0; //  Inicializa um contador para gerar IDs únicos para as tarefas
+    let contador = 0; // Inicializa um contador para gerar IDs únicos para as tarefas
 
     // Define uma ação ao clicar no botão "Adicionar Tarefa" 
     document.getElementById('button').onclick = function() {

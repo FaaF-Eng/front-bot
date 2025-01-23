@@ -40,7 +40,7 @@ html,body{
 /*Adicionando o Botão*/
 --background: var(--corClara);
 --botaoBg:  var(--black);
---botaoFontColor:var(--yellow);
+--botaoFontColor:pink;
 --blockColor: white;
 }
 
@@ -49,14 +49,13 @@ html,body{
 --fontColor: var(--white);
 /*Adicionando o Botão*/
 --background: var(--black);
---botaoBg:  var(--yellow);
+--botaoBg: pink;
 --botaoFontColor:var(--black);
 --blockColor: var(--pink);
 
 }
 .botão :focus {outline-style: none;}
 
-/*Criando o Botão Arredondado*/
 .botão{
     position: absolute;
     top: 50px;
@@ -159,7 +158,7 @@ html,body{
     border-radius:20px 20px 20px 20px ;
 }
 
-/*SESSÃO DO BOTÃO*/
+/* [SESSÃO DO BOTÃO DE ENVIAR MENSAGEM ]*/
 .btn-animado {
     border: 2px solid;
     border-radius: 10px;
@@ -206,10 +205,10 @@ html,body{
 }
 
 .btn-animado:active::after {
-    transform: translate(-50%, -50%) scale(1); /* Expande o círculo  */
+    transform: translate(-50%, -50%) scale(1); /* Expande o círculo */
     opacity: 0; /* Faz o efeito desaparecer ao final */
 }
-
+/* [ANIMAÇÃO DO CORAÇÃO ]*/
 @keyframes subirDescer { /*Animação do coração*/
     0%{
         transform: translateY(0);
